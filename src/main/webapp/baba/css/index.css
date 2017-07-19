@@ -1,0 +1,168 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.logo_main {
+	margin-left: 1vw;
+	width: 10vw;
+	height: 6vh;
+	line-height: 100%;
+	color: #FFFFFF;
+	font-size: 180%;
+	background-image: url('C:/Users/zhengyequan/Desktop/file/img/logo_main.png');
+	background-size: 100% 100%;
+}
+
+.city, .area {
+	margin-left: 5vw;
+	color: #FFFFFF;
+	font-weight: 600;
+	width: 4vw;
+	letter-spacing: 3px;
+}
+
+.search-content {
+	height: 3vh;
+	width: 30vw;
+	display: inline-block;
+	margin-left: 60vw;
+	outline: none;
+	border: none;
+	font-size: 110%;
+}
+
+.btn-search {
+	letter-spacing: 3px;
+	width: 6vw;
+	height: 3vh;
+	line-height: 3vh;
+	font-size: 110%;
+	text-align: center;
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	background-color: #FF6600;
+	outline: none;
+	border: none;
+	padding: 1px 0;
+}
+
+.first-ad {
+	height: 6vh;
+	margin: auto;
+}
+
+.first-ad img {
+	width: 100%;
+    height: 100%;
+}
+
+.second-ad {
+	height: 6vh;
+	margin: auto;
+	margin-top: 3px;
+}
+
+.second-ad img {
+	width: 100%;
+    height: 100%;
+}
+
+.back-main {
+	margin: 0;
+	padding: 0;
+	height: 10vh;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display:flex;
+	position: relative;
+}
+
+.back-main .logo-main {
+	height: 100%;
+}
+
+div.city-sel {
+	line-height: 10vh;
+	width: 5vw;
+	margin-left: 10vh;
+	text-align: center;
+	font-size: 150%;
+	font-weight: bold;
+	font-family: 'SimSun';
+	color: #000000;
+	background-image: url('../img/icon_sel.png');
+	background-size: 0.8vw 0.8vw;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.visitor-count {
+	line-height: 10vh;
+	text-align: center;
+	font-size: 110%;
+	color: #222222;
+	font-family: 'Microsoft Yahei';
+	width: 20vw;
+	margin-right: 5vw;
+	position: absolute;
+	right: 3vw;
+}
+
+.visitor-count span {
+	font-size: 150%;
+	color: #FF0000;
+}
+
+nav {
+	height: 6vh;
+	margin: 0;
+	margin-bottom: 1vh;
+	background: #0093DF;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display:flex;
+    align-items:center;
+}
+
+.main-content {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display:flex;
+}
+
+.img-parent {
+	border-top: 3px solid #DDDDDD;
+	border-right: 3px solid #DDDDDD;
+	width: 42vw;
+	height: 68vh;
+	padding: 0;
+	margin: 0;
+	padding-top: 1vh;
+	overflow-y: scroll;
+}
+
+.img-parent .img-item {
+	padding: 0;
+	margin: 0;
+	margin:0 0 1vw 1vw;
+	width: 19vw;
+}
+
+.map-parent {
+	width: 57vw;
+	height: 68vh;
+	overflow: hidden;
+	margin-left: 0.5vw;
+}
