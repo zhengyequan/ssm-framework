@@ -1,5 +1,13 @@
 package com.yqbaba.framework.service;
 
-public class BaseService {
+import javax.annotation.Resource;
 
+import org.springframework.transaction.support.TransactionTemplate;
+
+public class BaseService {
+	
+	@Resource
+	protected TransactionTemplate transactionTemplate;
+	
+	
 }

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<toolbox>
+	
+	<tool>
+		<key>esc</key>
+		<scope>application</scope>
+		<class>com.ccw.common.webwork.util.EscapeUtil</class>
+	</tool>
+	
+	<tool>
+		<key>date</key>
+		<scope>application</scope>
+		<class>com.ccw.common.webwork.util.DateFormatUtil</class>
+	</tool>
+	
+	<tool>
+		<key>str</key>
+		<scope>application</scope>
+		<class>com.ccw.util.StringUtil</class>
+	</tool>
+	
+	<tool>
+		<key>json</key>
+		<scope>application</scope>
+		<class>net.sf.json.JSONObject</class>
+	</tool>
+	
+	<tool>
+		<key>array</key>
+		<scope>application</scope>
+		<class>net.sf.json.JSONArray</class>
+	</tool>
+	
+	<tool>
+		<key>jsonConfig</key>
+		<scope>application</scope>
+		<class>com.ccw.util.JSONConfig</class>
+	</tool>
+	
+	<tool>
+		<key>bean</key>
+		<scope>application</scope>
+		<class>com.ccw.util.BeanUtil</class>
+	</tool>
+	
+	<tool>
+		<key>math</key>
+		<scope>application</scope>
+		<class>com.ccw.util.MathUtil</class>
+	</tool>
+	
+	<tool>
+		<key>uu</key>
+		<scope>application</scope>
+		<class>com.ccw.util.URLUtil</class>
+	</tool>
+	
+	<tool>
+		<key>engine</key>
+		<scope>application</scope>
+		<class>com.ccw.common.webwork.velocity.VelocityUtil</class>
+	</tool>
+	
+</toolbox>

@@ -13,4 +13,9 @@ public class BabaDao extends BaseDao {
 	public User getUserById(int id) {
 		return sqlSessionTemplate.selectOne(namespace + ".getUserById", id);
 	}
+
+	public void createUser(User user) {
+		sqlSessionTemplate.insert(namespace + ".createUser", user);
+	}
+
 }
