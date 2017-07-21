@@ -26,7 +26,6 @@
 		<property name="url" value="${db.url}" />
 		<property name="username" value="${db.username}" />
 		<property name="password" value="${db.password}" />
-		<property name="defaultAutoCommit" value="true" />
 	</bean>
 
 	<!-- mybatis文件配置，扫描所有mapper文件 -->
