@@ -4,6 +4,7 @@ import javax.annotation.Resource;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -19,18 +20,11 @@ public class TestController {
 	private TestService testService;
 
 	@RequestMapping("/test.do")
-	public String test(@RequestParam("idCard") String idCard, @RequestParam("cardNo") String cardNo) {
-		Test entity = new Test();
-		entity.setIdCard(idCard);
-		entity.setCardNo(cardNo);
-		testService.createTest(entity);
-
-		Test test = testService.getByIdCard("jj");
-		if (test == null) {
-			System.out.println(test);
-		} else {
-			System.out.println(test.getIdCard() + "; " + test.getCardNo());
-		}
+	public String test(ModelMap map, @RequestParam("idCard") String idCard, @RequestParam("cardNo") String cardNo) {
+		Test test = new Test();
+		test.setIdCard(idCard);
+		test.setCardNo(cardNo);
+		map.put("test", test);
 		return "test/test";
 	}
 

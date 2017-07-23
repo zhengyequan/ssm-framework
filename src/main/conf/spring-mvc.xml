@@ -23,20 +23,39 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 			</list>
 		</property>
 	</bean>
-	
+
 	<!-- 激活注解 -->
 	<context:annotation-config />
-	<context:component-scan base-package="com.yqbaba.*"/>
-	
+	<context:component-scan base-package="com.yqbaba.*" />
+
 	<!-- 扩展驱动，让请求可以进入到某个controller的方法中 -->
 	<mvc:annotation-driven />
-	
-	<!-- 配置视图解析器 -->
-	<!-- prefix和suffix：查找视图页面的前缀和后缀（前缀[逻辑视图名]后缀）， 比如传进来的逻辑视图名为WEB-INF/jsp/hello，则该该jsp视图页面应该存放在“WEB-INF/jsp/hello.jsp”； -->
-	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+
+	<!--配置试图解析器 -->
+	<bean
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="prefix" value="/" />
+		<property name="suffix" value=".ftl" />
+		<property name="contentType" value="text/html;charset=utf-8" />
 		<property name="viewClass"
-			value="org.springframework.web.servlet.view.JstlView"></property>
-		<property name="prefix" value="/"></property>
-		<property name="suffix" value=".vm"></property>
+			value="org.springframework.web.servlet.view.freemarker.FreeMarkerView" />
 	</bean>
+
+	<bean id="propertySetting"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath:freemarker/freemarker.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="freemarkerConfig"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath">
+			<value>/</value>
+		</property>
+		<property name="freemarkerSettings" ref="propertySetting" />
+	</bean>
+
 </beans>
