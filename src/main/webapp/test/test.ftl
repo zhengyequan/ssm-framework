@@ -1,3 +1,2 @@
 <html>
-	${test.idCard}
 </html>

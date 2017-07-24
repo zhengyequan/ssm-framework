@@ -58,10 +58,6 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 		<property name="freemarkerSettings" ref="propertySetting" />
 	</bean>
 
-	<mvc:interceptors>
-		<!-- 配置自定义拦截器 -->
-		<bean class="com.yqbaba.framework.interceptor.ExcpetionInterceptor"></bean>
-		<bean class="com.yqbaba.framework.interceptor.ResponseBodyInterceptor"></bean>
-	</mvc:interceptors>
+	<bean class="com.yqbaba.framework.exception.resolver.ExceptionResolver"></bean> 
 
 </beans>

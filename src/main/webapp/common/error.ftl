@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>出错啦</title>
+	<title></title>
 </head>
 <body>
-	出错啦！
+	页面出错啦！
 </body>
 </html>

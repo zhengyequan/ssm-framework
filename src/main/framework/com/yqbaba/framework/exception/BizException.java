@@ -1,4 +1,4 @@
-package com.yqbaba.framework.Exception;
+package com.yqbaba.framework.exception;
 
 public class BizException extends RuntimeException {
 

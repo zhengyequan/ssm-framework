@@ -153,6 +153,5 @@
 			<artifactId>freemarker</artifactId>
 			<version>2.3.22</version>
 		</dependency>
-
 	</dependencies>
 </project>
