@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yqbaba.framework.annotation.JsonMethod;
 import com.yqbaba.framework.exception.BizException;
-import com.yqbaba.framework.util.MessageUtil;
 import com.yqbaba.test.entity.Test;
 import com.yqbaba.test.error.TestError;
 import com.yqbaba.test.service.TestService;
@@ -31,10 +30,7 @@ public class TestController {
 		test.setIdCard("testJsonSuccess");
 		test.setCardNo("1");
 		map.put("data", JSONObject.fromObject(test).toString());
-		String message = MessageUtil.getMessage(TestError.TEST, "郑叶全");
-		System.out.println(message);
-		throw new RuntimeException();
-		// return "common/json_success";
+		return "common/json_success";
 	}
 
 	@JsonMethod

@@ -40,7 +40,7 @@
 	</appender>
 
 	<category name="java.sql">
-		<priority value="DEBUG" />
+		<priority value="WARN" />
 	</category>
 
 	<category name="net.sf.json.JSONObject">
