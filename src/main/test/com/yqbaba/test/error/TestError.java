@@ -1,8 +1,10 @@
 package com.yqbaba.test.error;
 
-public enum TestError {
+import com.yqbaba.framework.error.IError;
 
-	TEST(0);
+public enum TestError implements IError {
+
+	TEST(-100);
 
 	private final int code;
 

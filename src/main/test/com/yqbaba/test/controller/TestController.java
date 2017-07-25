@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yqbaba.framework.annotation.JsonMethod;
 import com.yqbaba.framework.exception.BizException;
+import com.yqbaba.framework.util.StringUtil;
 import com.yqbaba.test.entity.Test;
 import com.yqbaba.test.error.TestError;
 import com.yqbaba.test.service.TestService;
-
-import net.sf.json.JSONObject;
 
 @Controller
 @Scope("prototype")
@@ -29,7 +28,7 @@ public class TestController {
 		Test test = new Test();
 		test.setIdCard("testJsonSuccess");
 		test.setCardNo("1");
-		map.put("data", JSONObject.fromObject(test).toString());
+		map.put("data", StringUtil.quotes("zheng"));
 		return "common/json_success";
 	}
 
@@ -40,7 +39,7 @@ public class TestController {
 		test.setIdCard("testJsonSuccess");
 		test.setCardNo("1");
 		map.put("test", test);
-		throw new BizException(TestError.TEST);
+		throw new BizException(TestError.TEST, "郑", "叶全");
 	}
 
 	@RequestMapping("/testPageSuccess.do")

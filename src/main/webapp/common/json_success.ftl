@@ -1,4 +1,4 @@
 {
-	"result": 0,
-	${data}
+	"result": 0
+	<#if data??>,"data":${data}</#if>
 }
