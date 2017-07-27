@@ -87,21 +87,6 @@ body {
 	height: 100%;
 }
 
-div.city-sel {
-	line-height: 10vh;
-	width: 5vw;
-	margin-left: 10vh;
-	text-align: center;
-	font-size: 150%;
-	font-weight: bold;
-	font-family: 'SimSun';
-	color: #000000;
-	background-image: url('../img/icon_sel.png');
-	background-size: 0.8vw 0.8vw;
-	background-repeat: no-repeat;
-	background-position: right center;
-}
-
 .visitor-count {
 	line-height: 10vh;
 	text-align: center;
