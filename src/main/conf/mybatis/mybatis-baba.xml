@@ -2,17 +2,19 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="baba">
-	<resultMap type="com.yqbaba.baba.entity.User" id="User"/>
+	<resultMap type="com.yqbaba.baba.entity.LoupanInfo" id="LoupanInfo"/>
 	
-	<select id="getUserById" resultMap="User">
-		select * from User where id=#{id}
+	<select id="getById" resultMap="LoupanInfo">
+		select * from Loupan_Info where id=#{id}
 	</select>
 	
-	<insert id="createUser">
-		insert into User(
-			name, age
+	<insert id="createLoupanInfo">
+		insert into Loupan_Info(
+			name, subName, detailDesc, imgPath, lng, lat, price, contactName, contactPhone, 
+			contactLandLine, contactWX, contactQQ, status, gmtCreated
 		) values (
-			#{name}, #{age}
+			#{name}, #{subName}, #{detailDesc}, #{imgPath}, #{lng}, #{lat}, #{price}, #{contactName}, 
+			#{contactPhone}, #{contactLandLine}, #{contactWX}, #{contactQQ}, #{status}, #{gmtCreated}
 		)
 	</insert>
 </mapper>
