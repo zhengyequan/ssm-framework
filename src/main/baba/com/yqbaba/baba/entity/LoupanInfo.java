@@ -11,7 +11,15 @@ public class LoupanInfo extends BaseEntity {
 	private String name;
 	private String subName;
 	private String detailDesc;
-	private String imgPath;
+	private String developer;
+	private String areaCode;
+	private String indexImgs;
+	private String planImgs;
+	private String supportImgs;
+	private String effectImgs;
+	private String modelImgs;
+	private String layoutImgs;
+	private String link;
 	private double lng;
 	private double lat;
 	private String price;
@@ -21,6 +29,7 @@ public class LoupanInfo extends BaseEntity {
 	private String contactWX;
 	private String contactQQ;
 	private int status;
+	private Date gmtOpen;
 	private Date gmtCreated;
 
 	public String getName() {
@@ -47,12 +56,76 @@ public class LoupanInfo extends BaseEntity {
 		this.detailDesc = detailDesc;
 	}
 
-	public String getImgPath() {
-		return imgPath;
+	public String getDeveloper() {
+		return developer;
 	}
 
-	public void setImgPath(String imgPath) {
-		this.imgPath = imgPath;
+	public void setDeveloper(String developer) {
+		this.developer = developer;
+	}
+
+	public String getAreaCode() {
+		return areaCode;
+	}
+
+	public void setAreaCode(String areaCode) {
+		this.areaCode = areaCode;
+	}
+
+	public String getIndexImgs() {
+		return indexImgs;
+	}
+
+	public void setIndexImgs(String indexImgs) {
+		this.indexImgs = indexImgs;
+	}
+
+	public String getPlanImgs() {
+		return planImgs;
+	}
+
+	public void setPlanImgs(String planImgs) {
+		this.planImgs = planImgs;
+	}
+
+	public String getSupportImgs() {
+		return supportImgs;
+	}
+
+	public void setSupportImgs(String supportImgs) {
+		this.supportImgs = supportImgs;
+	}
+
+	public String getEffectImgs() {
+		return effectImgs;
+	}
+
+	public void setEffectImgs(String effectImgs) {
+		this.effectImgs = effectImgs;
+	}
+
+	public String getModelImgs() {
+		return modelImgs;
+	}
+
+	public void setModelImgs(String modelImgs) {
+		this.modelImgs = modelImgs;
+	}
+
+	public String getLayoutImgs() {
+		return layoutImgs;
+	}
+
+	public void setLayoutImgs(String layoutImgs) {
+		this.layoutImgs = layoutImgs;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
 	}
 
 	public double getLng() {
@@ -125,6 +198,14 @@ public class LoupanInfo extends BaseEntity {
 
 	public void setStatus(int status) {
 		this.status = status;
+	}
+
+	public Date getGmtOpen() {
+		return gmtOpen;
+	}
+
+	public void setGmtOpen(Date gmtOpen) {
+		this.gmtOpen = gmtOpen;
 	}
 
 	public Date getGmtCreated() {

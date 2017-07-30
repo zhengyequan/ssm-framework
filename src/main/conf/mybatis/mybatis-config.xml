@@ -5,6 +5,5 @@
 <configuration>
 	<mappers>
 		<mapper resource="/mybatis/mybatis-baba.xml" />
-		<mapper resource="/mybatis/mybatis-test.xml" />
 	</mappers>
 </configuration>

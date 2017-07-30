@@ -40,7 +40,7 @@
 	</appender>
 
 	<category name="java.sql">
-		<priority value="WARN" />
+		<priority value="ERROR" />
 	</category>
 
 	<category name="net.sf.json.JSONObject">
@@ -52,7 +52,7 @@
 	</category>
 
 	<root>
-		<priority value="INFO" />
+		<priority value="DEBUG" />
 		<appender-ref ref="console" />
 	</root>
 

@@ -5,16 +5,49 @@
 	<resultMap type="com.yqbaba.baba.entity.LoupanInfo" id="LoupanInfo"/>
 	
 	<select id="getById" resultMap="LoupanInfo">
-		select * from Loupan_Info where id=#{id}
+		<![CDATA[
+			select * from Loupan_Info where id=#{id}
+		]]>
+	</select>
+	
+	<select id="getByName" resultMap="LoupanInfo">
+		<![CDATA[
+			select * from Loupan_Info where name like concat(concat('%',#{name}),'%')
+		]]>
+	</select>
+	
+	<select id="listLoupans" resultMap="LoupanInfo">
+		<![CDATA[
+			select * from Loupan_Info 
+			where lng >= #{minLng} 
+			and lng <= #{maxLng}
+			and lat >= #{minLat}
+			and lat <= #{maxLat}
+		]]>
 	</select>
 	
 	<insert id="createLoupanInfo">
-		insert into Loupan_Info(
-			name, subName, detailDesc, imgPath, lng, lat, price, contactName, contactPhone, 
-			contactLandLine, contactWX, contactQQ, status, gmtCreated
-		) values (
-			#{name}, #{subName}, #{detailDesc}, #{imgPath}, #{lng}, #{lat}, #{price}, #{contactName}, 
-			#{contactPhone}, #{contactLandLine}, #{contactWX}, #{contactQQ}, #{status}, #{gmtCreated}
-		)
+		<![CDATA[
+			insert into Loupan_Info(
+				name, subName, detailDesc, indexImgs, planImgs, effectImgs, supportImgs, modelImgs, layoutImgs, link, lng, lat, price, 
+				contactName, contactPhone, contactLandLine, contactWX, contactQQ, status, gmtOpen, gmtCreated
+			) values (
+				#{name}, #{subName}, #{detailDesc}, #{indexImgs}, #{planImgs}, #{effectImgs}, #{supportImgs}, #{modelImgs}, #{layoutImgs}, #{link},
+				#{lng}, #{lat}, #{price}, #{contactName}, #{contactPhone}, #{contactLandLine}, #{contactWX}, #{contactQQ}, #{status}, #{gmtOpen}, now()
+			)
+		]]>
 	</insert>
+	
+	<update id="png2Jpg">
+		<![CDATA[
+			update Loupan_Info
+			set indexImg=#{indexImg},
+			planImgs=#{planImgs},
+			effectImgs=#{effectImgs},
+			supportImgs=#{supportImgs},
+			modelImgs=#{modelImgs},
+			layoutImgs=#{layoutImgs}
+			where id=#{id}
+		]]>
+	</update>
 </mapper>
