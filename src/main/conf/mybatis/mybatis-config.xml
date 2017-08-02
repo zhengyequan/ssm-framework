@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<mappers>
-		<mapper resource="/mybatis/mybatis-baba.xml" />
+		<mapper resource="mybatis/GlobalConfig.xml" />
+		<mapper resource="mybatis/Baba.xml" />
 	</mappers>
 </configuration>

@@ -59,7 +59,7 @@
 						        });
 						        markers.push(marker);
 						        $('.img-parent').append(
-						        	'<img class="img-item" src="' + item.imgPath + '"/>'
+						        	'<div class="img-frame"><img class="img-item" src="' + item.absIndexImg + '"/><br><span>' + item.name + '</span></div>'
 						        );
 	    					}
     					}

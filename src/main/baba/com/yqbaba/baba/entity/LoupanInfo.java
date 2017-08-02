@@ -32,6 +32,9 @@ public class LoupanInfo extends BaseEntity {
 	private Date gmtOpen;
 	private Date gmtCreated;
 
+	// DTO
+	private String absIndexImg;
+
 	public String getName() {
 		return name;
 	}
@@ -214,6 +217,14 @@ public class LoupanInfo extends BaseEntity {
 
 	public void setGmtCreated(Date gmtCreated) {
 		this.gmtCreated = gmtCreated;
+	}
+
+	public String getAbsIndexImg() {
+		return absIndexImg;
+	}
+
+	public void setAbsIndexImg(String absIndexImg) {
+		this.absIndexImg = absIndexImg;
 	}
 
 }

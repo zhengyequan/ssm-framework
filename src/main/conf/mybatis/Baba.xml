@@ -38,16 +38,4 @@
 		]]>
 	</insert>
 	
-	<update id="png2Jpg">
-		<![CDATA[
-			update Loupan_Info
-			set indexImg=#{indexImg},
-			planImgs=#{planImgs},
-			effectImgs=#{effectImgs},
-			supportImgs=#{supportImgs},
-			modelImgs=#{modelImgs},
-			layoutImgs=#{layoutImgs}
-			where id=#{id}
-		]]>
-	</update>
 </mapper>

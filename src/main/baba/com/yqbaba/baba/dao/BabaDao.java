@@ -35,8 +35,4 @@ public class BabaDao extends BaseDao {
 		sqlSessionTemplate.insert(namespace + ".createLoupanInfo", loupan);
 	}
 
-	public void png2Jpg(LoupanInfo loupan) {
-		sqlSessionTemplate.update(namespace + ".png2Jpg", loupan);
-	}
-
 }

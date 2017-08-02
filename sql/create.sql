@@ -27,3 +27,11 @@ create table Loupan_Info(
 	
 	primary key(id)
 );
+
+drop table if exists Global_Config;
+create table Global_Config(
+	id int(11) not null AUTO_INCREMENT,
+	domainName text not null,
+	
+	primary key(id)
+);

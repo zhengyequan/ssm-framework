@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="globalConfig">
+
+	<resultMap type="com.yqbaba.common.entity.GlobalConfig" id="GlobalConfig"/>
+	
+	<select id="getGlobalConfig" resultMap="GlobalConfig">
+		<![CDATA[
+			select * from Global_Config limit 1
+		]]>
+	</select>
+	
+</mapper>
