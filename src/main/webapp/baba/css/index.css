@@ -7,9 +7,9 @@ body {
 .canvas-container {
 	margin: 0;
 	padding: 0;
-	height: 24vh;
-	width: 100%;
-	background: linear-gradient(to bottom, #0093DF, #000000);
+	height: 100vh;
+	width: 100vw;
+	background: linear-gradient(to bottom, #CCCC99, #CCCC99);
 }
 
 .city, .area {

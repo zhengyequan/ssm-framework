@@ -12,6 +12,10 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
+	<listener>
+		<listener-class>com.yqbaba.framework.listener.AfterSpringListener</listener-class>
+	</listener>
+
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:spring-framework.xml</param-value>
@@ -39,7 +43,7 @@
 
 	<servlet-mapping>
 		<servlet-name>mvc</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>*.a</url-pattern>
 	</servlet-mapping>
 
 	<filter>
