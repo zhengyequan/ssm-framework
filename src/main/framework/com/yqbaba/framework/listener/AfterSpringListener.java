@@ -1,6 +1,7 @@
 package com.yqbaba.framework.listener;
 
 import com.yqbaba.test.service.KafkaConsumer;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -17,7 +18,8 @@ public class AfterSpringListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent event) {
         WebApplicationContext springContext = WebApplicationContextUtils.getWebApplicationContext(event.getServletContext());
-        KafkaConsumer consumer = (KafkaConsumer)springContext.getBean("kafkaConsumer");
-        new Thread(consumer).start();
+        KafkaConsumer consumer = (KafkaConsumer) springContext.getBean("kafkaConsumer");
+        ThreadPoolTaskExecutor executor = (ThreadPoolTaskExecutor) springContext.getBean("threadPool");
+        executor.submit(consumer);
     }
 }

@@ -57,6 +57,7 @@ public class KafkaConsumer implements Runnable {
         while (it.hasNext()) {
             try {
                 System.out.println("message: " + new String(it.next().message(), "utf-8"));
+                consumer.commitOffsets();
             } catch (Exception e) {
                 e.printStackTrace();
             }

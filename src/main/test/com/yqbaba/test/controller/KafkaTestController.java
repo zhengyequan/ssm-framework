@@ -17,7 +17,6 @@ public class KafkaTestController {
 
     @RequestMapping("/test")
     public String test(ModelMap map, @RequestParam("data") String data) {
-        System.out.print("走不走");
         kafkaTemplate.send("myTopic", 0, "key", data);
         return "common/json_success";
     }
