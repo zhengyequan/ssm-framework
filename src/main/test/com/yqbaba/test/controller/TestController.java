@@ -49,7 +49,7 @@ public class TestController {
 	}
 
 	/** 读取图片并重命名 */
-	private String getImgNamesFromDesk(String root, String sub) {
+	private String getImgNamesFromDesk(String root, final String sub) {
 		File rootDir = new File("D:/" + root + "/");
 		System.out.println(rootDir.isDirectory());
 		File[] subDirs = rootDir.listFiles(new FileFilter() {
