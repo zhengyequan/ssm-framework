@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 public class KafkaTestController {
 
     @Resource
-    private KafkaTemplate kafkaTemplate;
+    private KafkaTemplate<String, String> kafkaTemplate;
 
     @RequestMapping("/test")
     public String test(ModelMap map, @RequestParam("data") String data) {
